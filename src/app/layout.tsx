@@ -13,8 +13,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Data Structure Visualizer",
-  description: "Interactive data structure learning platform with animations",
+  title: "Data Structure Visualizer | Interactive Learning Platform",
+  description: "Master data structures through interactive animations and visualizations. Learn Stack, Linked List, Heap, and more with step-by-step visual guides.",
+  keywords: "data structures, algorithms, visualization, learning, programming, computer science",
+  authors: [{ name: "Niraj Bhattarai" }],
+  openGraph: {
+    title: "Data Structure Visualizer",
+    description: "Interactive data structure learning platform with animations",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -23,9 +30,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-br from-slate-50 to-slate-100 min-h-screen`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gradient-to-br from-slate-50 via-white to-slate-100 min-h-screen`}
       >
         {children}
       </body>
